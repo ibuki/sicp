@@ -1,0 +1,21 @@
+#lang racket
+(define memo '())
+(define (f x)
+  (if (empty? memo)
+      (begin
+        (set! memo x)
+        memo)
+      memo))
+; (pair? '())
+; (empty? '())
+; (f -10)
+; (f -9)
+; (f -8)
+; (f -7)
+; (f 20)
+; (f 21)
+; (f 22)
+; (f 23)
+
+(+ (f 0) (f 1))
+; (+ (f 1) (f 0))
